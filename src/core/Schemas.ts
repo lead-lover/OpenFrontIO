@@ -141,8 +141,8 @@ export const PublicGameTypeSchema = z.enum(["ffa", "team", "special"]);
 
 export const UsernameSchema = z
   .string()
-  .regex(/^(?=.*\S)[a-zA-Z0-9_ üÜ.]+$/u)
-  .min(3)
+  .regex(/^(?=.*\S)[a-zA-Z0-9_ üÜ.\p{Script=Han}]+$/u)
+  .min(2)
   .max(27);
 
 export const ClanTagSchema = z
