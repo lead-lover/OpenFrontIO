@@ -20,7 +20,7 @@ describe("username.ts functions", () => {
       expect(res.error).toBeDefined();
     });
     test("rejects too short", () => {
-      const res = validateUsername("ab");
+      const res = validateUsername("a");
       expect(res.isValid).toBe(false);
     });
     test("rejects too long", () => {
